@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MhsController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\LatihanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,3 +37,5 @@ Route::post('biodata/proses',[MhsController::class, 'proses']);
 Route::get('blog', [BlogController::class, 'index']);
 Route::get('tentang', [BlogController::class, 'tentang']);
 Route::get('kontak', [BlogController::class, 'kontak']);
+Route::get('matematika',[LatihanController::class, 'index']);
+Route::get('pangkat',[LatihanController::class, 'pangkat']);
