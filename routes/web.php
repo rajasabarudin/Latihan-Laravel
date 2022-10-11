@@ -5,6 +5,8 @@ use App\Http\Controllers\MhsController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\LatihanController;
+use App\Http\Controllers\BelajarController;
+use App\Http\Controllers\BookingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,3 +41,10 @@ Route::get('tentang', [BlogController::class, 'tentang']);
 Route::get('kontak', [BlogController::class, 'kontak']);
 Route::get('matematika',[LatihanController::class, 'index']);
 Route::get('pangkat',[LatihanController::class, 'pangkat']);
+
+
+Route::get('formulir', [BelajarController::class, 'index']);
+Route::get('formulir/hasil', [BelajarController::class, 'hasil']);
+
+Route::get('booking', [BookingController::class, 'booking']);
+Route::post('hasil', [BookingController::class, 'hasil']);
